@@ -1,0 +1,13 @@
+{
+    "name": "dule/login",
+    "description": "This will log in user",
+    "type": "libary",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Dule\\Login\\": "src/"
+        }
+    }
+}
