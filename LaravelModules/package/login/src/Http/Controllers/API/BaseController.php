@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Http\Controllers\API;
+namespace Dule\Login\Http\Controllers\API;
 
 
 use Illuminate\Http\Request;

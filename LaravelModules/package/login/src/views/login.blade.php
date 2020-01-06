@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<form action="{{route('login')}}" method="post">
+<form action="{{route('loginUser')}}" method="post">
   @csrf
 
   <div class="container">

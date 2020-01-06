@@ -19,7 +19,7 @@ class LoginController extends Controller
         $email =  $request->email;
         $passwrod = $request->psw;
         $user = DB::table('users')->where('email', '=', $email)
-        ->where('password', '=', $passwrod)->get();
+        ->where('password', '=', $passwrod)->first();
         if($user != null)
         {
             return view('login::home', compact('user'));
@@ -27,5 +27,9 @@ class LoginController extends Controller
         
        
         
+    }
+    public function home()
+    {
+        return view('login::home');
     }
 }

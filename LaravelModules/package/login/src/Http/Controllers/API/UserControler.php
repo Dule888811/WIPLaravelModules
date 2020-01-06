@@ -1,5 +1,5 @@
 <?php
-namespace App\Http\Controllers\API;
+namespace Dule\Login\Http\Controllers\API;
 
 
 use Illuminate\Http\Request;
@@ -10,12 +10,12 @@ use Dule\Login\Models\User;
 
 
 
-class ArticleController extends BaseController
+class UserController extends BaseController
 {
     public function index($id)
     {
         $User = User::find($id);
-        $data = $user->toArray();
+        $data = $user;
 
         $response = [
             'success' => true,
