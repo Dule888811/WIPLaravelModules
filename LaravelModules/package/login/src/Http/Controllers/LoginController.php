@@ -22,14 +22,26 @@ class LoginController extends Controller
         ->where('password', '=', $passwrod)->first();
         if($user != null)
         {
-            return view('login::home', compact('user'));
+          //  return view('login::home', compact('user'));
+          return redirect()->route('home', ['id' => $user->id]);
         }
         
        
         
     }
-    public function home()
+
+    public function home($id)
     {
-        return view('login::home');
+        return view('login::home', compact('id'));
     }
+
+    public function getAPIMethods( )
+	{
+		return $this->setRequest(
+			array(
+				'login' => 'api.methods',
+				'method' => 'GET'
+			)
+		);
+	}
 }
