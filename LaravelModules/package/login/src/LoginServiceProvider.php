@@ -2,7 +2,6 @@
 namespace Dule\Login;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
-
 class LoginServiceProvider extends ServiceProvider
 
 {
@@ -10,6 +9,7 @@ class LoginServiceProvider extends ServiceProvider
     {
         Schema::defaultStringLength(191);
         $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
+      //  $this->loadRoutesFrom('/package/humanity/src/routes/web.php');
         $this->loadRoutesFrom(__DIR__ . '/routes/api.php');
         $this->loadViewsFrom(__DIR__. '/views', 'login');
         $this->loadMigrationsFrom(__DIR__.'/database/migrations');
@@ -18,6 +18,6 @@ class LoginServiceProvider extends ServiceProvider
    
     public function register()
     {
-      
+        
     }
 }

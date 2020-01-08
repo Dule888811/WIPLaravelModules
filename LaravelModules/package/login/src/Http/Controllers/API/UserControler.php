@@ -14,8 +14,8 @@ class UserController extends BaseController
 {
     public function index($id)
     {
-        $User = User::find($id);
-        $data = $user;
+        $user = User::find($id);
+        $data = $user->email;
 
         $response = [
             'success' => true,

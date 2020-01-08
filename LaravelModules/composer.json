@@ -44,7 +44,8 @@
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/",
-            "Dule\\Login\\" : "package/login/src"
+            "Dule\\Login\\" : "package/login/src",
+            "Dule\\Humanity\\" : "package/humanity/src"
         }
     },
     "minimum-stability": "dev",
